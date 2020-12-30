@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization_Lat_vs_Humi</title>
+</head>
+<body>
+    <h1>Latitude</h1>
+    <hr/>
+    
+    <h1>Humidity</h1>
+    
+    <p align="left">
+        <a href="{{url_for('index')}}">
+            <img src="{{url_for('static', filename='Fig2.png')}}" width="700" height="405" border="0">
+        </a>
+                
+    </p>
+
+    <h2 align="center">Visualizations</h2>
+    <br/>
+
+    <p align="center">
+        <a href="{{url_for('temp')}}">
+            <img src="{{url_for('static', filename='Fig1.png')}}" width="300" height="205" border="0"/> 
+        </a>
+        <a href="{{url_for('humi')}}">
+            <img src="{{url_for('static', filename='Fig2.png')}}" width="300" height="205" border="2"/> 
+        </a>
+        <a href="{{url_for('clou')}}">
+            <img src="{{url_for('static', filename='Fig3.png')}}" width="300" height="205" border="0"/> 
+        </a>   
+        <a href="{{url_for('wind')}}">
+            <img src="{{url_for('static', filename='Fig4.png')}}" width="300" height="205" border="0"/> 
+        </a>   
+    </p> 
+</body>
+</html>

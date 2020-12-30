@@ -1,21 +1,31 @@
-from flask import Flask, jsonify, request, render_template
-from flask_sqlalchemy import SQLAlchemy
-import datetime
-import csv
-import os
-# from config import URI  
-import pandas as pd
-from sqlalchemy import create_engine
-
-app = Flask(__name__, template_folder="templates")
+from flask import Flask, render_template
 
 
+app = Flask(__name__)
 
-# ROOT = "./Data"
-# CONN = os.getenv("CONN")
+@app.route("/")
+def index():
+    return render_template("Index.html")
 
-# engine = create_engine(CONN)
+@app.route("/cloudiness")
+def clou():
+    return render_template("Lat_vs_Clou.html")
 
+@app.route("/humidity")
+def humi():
+    return render_template("Lat_vs_Humi.html")
+
+@app.route("/temperature")
+def temp():
+    return render_template("Lat_vs_Temp.html")
+
+@app.route("/wind")
+def wind():
+    return render_template("Lat_vs_Wind.html")
+
+@app.route("/comparisons")
+def compa():
+    return render_template("Comparisons.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
