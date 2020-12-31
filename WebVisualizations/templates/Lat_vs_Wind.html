@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualization_Lat_vs_Wind</title>
+    <style>
+        #header {
+            color:#FFFFFF;
+            background-color:#3eada8; 
+        }
+        #headerII {
+            color:#3eada8;
+             
+        }
+
+        #headerIII {
+            color:#3eada8; 
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Latitude</h1>
-    <hr/>
+    <div id="header">
+        <p>
+            <h1>Latitude</h1>
+        </p>
+    </div>
+  
     
-    <h1>Wind Speed</h1>
+    <div id="headerII">
+        <p>
+            <h1>Wind Speed</h1>
+
+        </p>
+    </div>
     
     <p align="left">
         <a href="{{url_for('index')}}">
@@ -18,7 +42,12 @@
                 
     </p>
 
-    <h2 align="center">Visualizations</h2>
+    <div id="headerIII">
+        <p>
+            <h2>Visualizations</h2>
+        </p>
+    </div>
+    
     <br/>
 
     <p align="center">

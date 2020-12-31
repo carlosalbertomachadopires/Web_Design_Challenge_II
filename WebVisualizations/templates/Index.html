@@ -4,31 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing_Page</title>
+    <style>
+        #header {
+            color:#FFFFFF;
+            background-color:#3eada8; 
+        }
+
+        #headerII {
+            color:#3eada8;
+             
+        }
+
+        #headerIII {
+            color:#3eada8; 
+            text-align: center;
+        }
+
+        #text {
+            font-size: 18px;
+            font-family: 'Arial', Helvetica, sans-serif; 
+            
+            
+        }
+
+        .bold {
+            font-weight:bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Latitude</h1>
-        
-    <hr/>
-    
-    <h1>Summary: Latitude vs. X</h1>
-    
-    <p align="left">
-        <a href="{{url_for('index')}}">
-            <img src="{{url_for('static', filename='Fig1.png')}}" width="700" height="405" border="0">
-        </a>
-        
-        
-    </p>
-    <aside align="center">
-
-        <p align="right">
-            <h2>
-            The purpose of this <strong>project</strong> is to analyse how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities. After assembling the dataset, we used Mataplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trendas and correlations witnessed.
-            </h2>
+    <div id="header">
+        <p>
+            <h1 >Latitude</h1>
         </p>
-    </aside>
+    </div>
+        
+    
+    
+    <div id="headerII">
+        <p>
+            <h1 >Summary: Latitude vs. X</h1>
+        </p>
+    </div>
+    
+    
+        
+        
+   
+    
+    <div id="text" class="bold">
+        
+        <p>
+            The purpose of this <strong>project</strong> is to analyse how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities. After assembling the dataset, we used Mataplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trendas and correlations witnessed.
+            
+        </p>
 
-    <h2 align="center">Visualizations</h2>
+        <p>
+            <a href="{{url_for('index')}}">
+                <img src="{{url_for('static', filename='Fig1.png')}}" width="700" height="405" border="0">
+            </a>
+        </p>
+        
+    </div>
+        
+    
+    <div id="headerIII">
+        <p>
+            <h2>Visualizations</h2>
+        </p>
+    </div>
+    
     <br/>
 
     <p align="center">
