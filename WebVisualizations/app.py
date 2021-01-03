@@ -26,5 +26,9 @@ def wind():
 def compa():
     return render_template("Comparisons.html")
 
+@app.route("/data")
+def data():
+    return render_template("Data.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
