@@ -1,6 +1,9 @@
 from flask import Flask, render_template
+import pandas as pd
+import os
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def index():
@@ -28,7 +31,12 @@ def compa():
 
 @app.route("/data")
 def data():
-    return render_template("Data.html")
+    path = os.path.join("Resources/cities.csv")
+    cities_data = pd.read_csv(path)
+    print(cities_data)
+    cities = cities_data.to_dict(orient="record")
+    print(cities)
+    return render_template("Data.html", cities=cities)
 
 if __name__ == "__main__":
     app.run(debug=True)
