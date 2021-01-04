@@ -113,8 +113,47 @@
         </p>
     </div>  
       <br/><br/>
-</head>
-<body>
-    
+
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6">
+         <p>
+            <table>
+              <tr>
+                <!-- <th>city_ID</th> -->
+                <th>City</th>
+                <th>Cloudiness</th>
+                <th>Country</th>
+                <!-- <th>Date</th> -->
+                <th>Humidity</th>
+                <th>Lat</th>
+                <th>Lng</th>
+                <th>Max Temp</th>
+                <th>Wind Speed</th>
+              </tr>
+              {% for city in cities %}
+              <tr>
+                <!-- <td>{{ city.City_ID }}</td> -->
+                <td>{{ city.City }}</td>
+                <td>{{ city.Cloudiness }}</td>
+                <td>{{ city.Country }}</td>
+                <!-- <td>{{ city.Date }}</td> -->
+                <td>{{ city.Humidity }}</td>
+                <td>{{ city.Lat }}</td>
+                <td>{{ city.Lng }}</td>
+                <td>{{ city.Max_Temp }}</td>
+                <td>{{ city.Wind_Speed }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </p>
+       </div>
+       <div class="col-md-6" id="text" class="bold">                
+        <p>
+            After assembling the dataset, we used Mataplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trendas and correlations witnessed.
+            
+        </p>
+     </div>
+   </div>
 </body>
 </html>
